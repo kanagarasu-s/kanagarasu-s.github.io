@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Kanagarasu S, DevOps Engineer and AWS Certified Solutions Architect – Associate. AWS, Terraform, CI/CD, Docker, Kubernetes, Linux and observability.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kanagarasu S | DevOps Engineer">
+  <meta property="og:description" content="AWS Certified Solutions Architect – Associate with 5+ years in DevOps and cloud. Terraform, CI/CD, Docker, Kubernetes, Linux and observability.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='42' font-size='28' font-weight='900' text-anchor='middle' fill='%2355d6be' font-family='Arial'%3EKS%3C/text%3E%3C/svg%3E">
+  <title>Kanagarasu S | DevOps Engineer</title>
+  <style>
+    :root {
+      --bg: #0b1220; --panel: #111c2e; --panel2: #142238; --text: #edf3fb;
+      --muted: #a7b5c9; --accent: #55d6be; --accent2: #7aa8ff; --line: rgba(180,205,235,.15);
+      --max: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0; color: var(--text); background:
+        radial-gradient(ellipse at 80% 0%, rgba(67,130,220,.16), transparent 36%),
+        radial-gradient(ellipse at 0% 35%, rgba(47,195,165,.10), transparent 30%), var(--bg);
+      font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 3px solid var(--accent2); outline-offset: 3px; border-radius: 6px; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px); background: rgba(11,18,32,.82); border-bottom: 1px solid var(--line); }
+    nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: .04em; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 22px; color: var(--muted); font-size: .92rem; }
+    .hero { padding: 94px 0 76px; display: grid; grid-template-columns: 1.5fr .8fr; gap: 48px; align-items: center; }
+    .eyebrow { color: var(--accent); font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .16em; }
+    h1 { margin: 14px 0 10px; font-size: clamp(2.7rem, 7vw, 5rem); line-height: 1.04; letter-spacing: -.055em; }
+    h1 span { color: var(--accent); }
+    .role { color: #d4e0f0; font-size: clamp(1.1rem, 2.5vw, 1.45rem); font-weight: 600; }
+    .intro { max-width: 690px; color: var(--muted); margin: 22px 0 28px; font-size: 1.06rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 18px; border-radius: 10px; border: 1px solid var(--line); font-weight: 700; transition: .2s; }
+    .btn.primary { color: #061a18; background: var(--accent); border-color: var(--accent); }
+    .btn.primary:hover { color: #061a18; }
+    .btn:hover { transform: translateY(-2px); }
+    .hero-card { background: linear-gradient(145deg, rgba(20,34,56,.96), rgba(17,28,46,.88)); border: 1px solid var(--line); border-radius: 22px; padding: 26px; box-shadow: 0 24px 70px rgba(0,0,0,.22); }
+    .hero-card h2 { font-size: 1.05rem; letter-spacing: 0; margin: 0 0 12px; }
+    .initials { width: 74px; height: 74px; display: grid; place-items: center; border-radius: 20px; color: #071b19; background: linear-gradient(135deg, var(--accent), #a1f0dc); font-size: 1.7rem; font-weight: 900; margin-bottom: 20px; }
+    .stat { padding: 14px 0; border-top: 1px solid var(--line); }
+    .stat strong { display: block; font-size: 1.25rem; }
+    .stat small { color: var(--muted); }
+    section { padding: 54px 0; }
+    .section-head { margin-bottom: 26px; }
+    h2 { margin: 0 0 8px; font-size: clamp(1.7rem, 4vw, 2.25rem); letter-spacing: -.035em; }
+    .sub { color: var(--muted); margin: 0; }
+    .about { max-width: 850px; color: #c2cede; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card { background: rgba(17,28,46,.82); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+    .card h3 { margin: 0 0 10px; font-size: 1.08rem; }
+    .card p, .card li { color: var(--muted); }
+    .card p { margin: 0 0 8px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag { border: 1px solid rgba(85,214,190,.25); background: rgba(85,214,190,.07); color: #c8f8ed; padding: 7px 11px; border-radius: 999px; font-size: .9rem; }
+    .project { position: relative; overflow: hidden; }
+    .project:before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(var(--accent2), var(--accent)); }
+    .ptype { color: var(--accent); font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+    .project .tags { margin-top: 14px; }
+    .project .tag { font-size: .82rem; padding: 5px 10px; }
+    code { background: rgba(122,168,255,.12); color: #cfe0ff; padding: 1px 6px; border-radius: 5px; font-size: .88em; }
+    .timeline { display: grid; gap: 16px; }
+    .job { position: relative; }
+    .job-top { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .job h3 { margin-bottom: 2px; }
+    .company { color: var(--accent); font-weight: 650; }
+    .date { color: var(--muted); font-size: .92rem; }
+    ul { margin: 12px 0 0; padding-left: 20px; }
+    li { margin: 7px 0; }
+    .cert { display: flex; align-items: flex-start; gap: 16px; }
+    .cert-icon { flex: 0 0 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; color: var(--accent); background: rgba(85,214,190,.1); font-weight: 900; font-size: .85rem; }
+    .edu + .edu { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 18px; }
+    .contact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .contact a { color: var(--accent); overflow-wrap: anywhere; }
+    .contact .card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0 36px; color: var(--muted); font-size: .9rem; text-align: center; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 64px; gap: 28px; }
+      .hero-card { max-width: 460px; }
+      .grid, .contact { grid-template-columns: 1fr; }
+      .navlinks { gap: 12px; font-size: .82rem; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: min(100% - 28px, var(--max)); }
+      nav { align-items: flex-start; padding: 15px 0; flex-direction: column; }
+      .navlinks { width: 100%; }
+      section { padding: 40px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">KANAGARASU<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+        <a href="#certification">Certification</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Cloud • Automation • Reliability</div>
+        <h1>Hi, I'm <span>Kanagarasu S.</span></h1>
+        <div class="role">DevOps Engineer | AWS Certified Solutions Architect – Associate</div>
+        <p class="intro">DevOps Engineer with 7+ years of overall IT experience, including 5+ years in cloud infrastructure, automation, CI/CD, containerization, and production operations. I focus on building reliable, secure, scalable, and cost-effective cloud environments.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <!-- Put your resume PDF in the same folder as index.html with this exact name -->
+          <a class="btn" href="Kanagarasu_Resume.pdf" download>Download resume ↓</a>
+          <a class="btn" href="https://github.com/kanagarasu-s" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/kanagarasu-s/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Professional snapshot">
+        <div class="initials">KS</div>
+        <h2>Professional Snapshot</h2>
+        <div class="stat"><strong>7+ Years</strong><small>Total IT experience</small></div>
+        <div class="stat"><strong>5+ Years</strong><small>DevOps &amp; cloud experience</small></div>
+        <div class="stat"><strong>AWS SAA-C03</strong><small>Certified — September 2026</small></div>
+        <div class="stat"><strong>Chennai, India</strong><small>Open to opportunities</small></div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Introduction</div><h2>About Me</h2></div>
+        <p class="about">I work across the DevOps lifecycle, including infrastructure provisioning, CI/CD pipeline implementation, containerized application deployments, cloud networking, monitoring, logging, troubleshooting, and production support. My experience includes supporting production and non-production environments, automating infrastructure with Terraform, and collaborating with development teams to improve operational reliability.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Technical Toolkit</div><h2>Core Skills</h2><p class="sub">Tools and platforms I work with.</p></div>
+        <div class="grid">
+          <article class="card"><h3>Cloud &amp; Infrastructure</h3><div class="tags"><span class="tag">AWS</span><span class="tag">EC2</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">S3</span><span class="tag">RDS</span><span class="tag">EBS</span><span class="tag">Lambda</span><span class="tag">Route 53</span><span class="tag">CloudWatch</span><span class="tag">Elastic Load Balancing</span><span class="tag">SNS</span><span class="tag">Google Cloud Run</span><span class="tag">Artifact Registry</span></div></article>
+          <article class="card"><h3>DevOps &amp; Automation</h3><div class="tags"><span class="tag">Terraform</span><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span><span class="tag">Git</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div></article>
+          <article class="card"><h3>Systems &amp; Networking</h3><div class="tags"><span class="tag">Linux Administration</span><span class="tag">Cloud Networking</span><span class="tag">Security</span><span class="tag">Production Support</span></div></article>
+          <article class="card"><h3>Monitoring &amp; Observability</h3><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Exporters</span><span class="tag">CloudWatch</span><span class="tag">Alerting</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Selected Work</div><h2>Projects</h2><p class="sub">Hands-on implementation work across AWS, Google Cloud, CI/CD and observability.</p></div>
+        <div class="grid">
+          <article class="card project"><div class="ptype">Infrastructure as Code</div><h3>Multi-account, multi-region AWS infrastructure</h3><p>Built Terraform configurations using provider aliases and account-specific profiles to provision VPC resources across AWS accounts and regions. Used reusable patterns with <code>count</code>, <code>for_each</code>, and lifecycle rules.</p><div class="tags"><span class="tag">Terraform</span><span class="tag">AWS</span><span class="tag">Provider Aliases</span></div></article>
+          <article class="card project"><div class="ptype">CI/CD Automation</div><h3>Self-hosted GitHub Actions runner</h3><p>Set up a self-hosted runner on an EC2 Linux instance and configured workflow runner labels to target the intended build environment.</p><div class="tags"><span class="tag">GitHub Actions</span><span class="tag">EC2</span><span class="tag">Linux</span></div></article>
+          <article class="card project"><div class="ptype">Cloud Application Platform</div><h3>Google Cloud Run deployment support</h3><p>Worked on Cloud Run service deployment and troubleshooting, container startup and port configuration, Artifact Registry image lifecycle policies, and controlled outbound connectivity.</p><div class="tags"><span class="tag">Google Cloud</span><span class="tag">Cloud Run</span><span class="tag">Artifact Registry</span></div></article>
+          <article class="card project"><div class="ptype">Monitoring &amp; Observability</div><h3>Infrastructure monitoring stack</h3><p>Worked with Prometheus exporters and Grafana dashboards to observe infrastructure and application metrics, and supported alerting and logging workflows.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Alerting</span></div></article>
+        </div>
+        <!-- TODO: add a "View code" link to each project once the sanitized repos are public on GitHub -->
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Career Journey</div><h2>Professional Experience</h2></div>
+        <div class="timeline">
+          <article class="card job">
+            <div class="job-top"><div><h3>Cloud Support Engineer</h3><div class="company">SQ1 (Formerly SecqureOne) · Chennai</div></div><div class="date">Feb 2025 – Present</div></div>
+            <ul>
+              <li>Manage and support AWS cloud infrastructure across production and non-production environments, focusing on availability, reliability, security, and operational stability.</li>
+              <li>Provision and manage infrastructure using Terraform and Infrastructure as Code practices.</li>
+              <li>Work with AWS services including EC2, VPC, IAM, S3, RDS, and Lambda.</li>
+              <li>Support CI/CD workflows using Jenkins and Git-based development practices.</li>
+              <li>Manage containerized workloads using Docker and Kubernetes, including deployment, configuration, and troubleshooting.</li>
+              <li>Maintain monitoring and observability using Prometheus, Grafana, logging solutions, and system/application metrics.</li>
+              <li>Troubleshoot infrastructure, networking, deployment, and application issues with development teams.</li>
+            </ul>
+          </article>
+          <article class="card job">
+            <div class="job-top"><div><h3>DevOps Engineer</h3><div class="company">SAIS Information Technologies Pvt Ltd · Chennai</div></div><div class="date">Nov 2019 – Feb 2025</div></div>
+            <ul>
+              <li>Managed AWS cloud infrastructure across production and non-production environments.</li>
+              <li>Provisioned and managed AWS infrastructure using Terraform and Infrastructure as Code.</li>
+              <li>Worked with EC2, VPC, IAM, S3, RDS, EBS, Lambda, Route 53, CloudWatch, and Elastic Load Balancing.</li>
+              <li>Designed and maintained Jenkins CI/CD pipelines and Git-based workflows for application build and deployment.</li>
+              <li>Supported Docker and Kubernetes application deployments, configuration management, and production troubleshooting.</li>
+              <li>Implemented monitoring and observability using CloudWatch, Prometheus, Grafana, exporters, logging, and alerting solutions.</li>
+              <li>Managed Linux infrastructure and collaborated with teams to improve deployment processes and operational reliability.</li>
+            </ul>
+          </article>
+          <article class="card job">
+            <div class="job-top"><div><h3>Executive IT</h3><div class="company">Inspace - Business Optimized · Chennai</div></div><div class="date">Oct 2018 – Nov 2019</div></div>
+            <ul>
+              <li>Provided day-to-day IT infrastructure and technical support for users, systems, and business applications.</li>
+              <li>Troubleshot hardware, software, operating system, network, and connectivity issues.</li>
+              <li>Performed system configuration, software installation, maintenance, and routine troubleshooting.</li>
+              <li>Supported network connectivity and maintained technical documentation and operational procedures.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certification">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Professional Development</div><h2>Certification &amp; Education</h2></div>
+        <div class="grid">
+          <article class="card cert">
+            <div class="cert-icon">AWS</div>
+            <div>
+              <h3>AWS Certified Solutions Architect – Associate</h3>
+              <p>Issued: September 2026 · Expires: September 2029</p>
+              <!-- TODO: replace href with your Credly badge URL or validation link -->
+              <p><a href="https://aws.amazon.com/verification" target="_blank" rel="noopener noreferrer">AWS Certification Verification ↗</a></p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="edu"><h3>Master of Computer Applications (MCA)</h3><p>Computer Programming, Specific Applications</p><p>Velammal Engineering College · June 2010 – July 2014</p></div>
+            <!-- TODO: verify MCA dates (an MCA is normally 3 years) -->
+            <div class="edu"><h3>B.Sc. Computer Science</h3><p>Periyar University · May 2007 – April 2010</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Let's Connect</div><h2>Contact</h2><p class="sub">Feel free to reach out for professional opportunities and conversations.</p></div>
+        <div class="contact">
+          <div class="card"><h3>Email</h3><a href="mailto:kanagarasu1906@gmail.com">kanagarasu1906@gmail.com</a></div>
+          <div class="card"><h3>Phone</h3><a href="tel:+916385326068">+91 63853 26068</a></div>
+          <div class="card"><h3>LinkedIn</h3><a href="https://www.linkedin.com/in/kanagarasu-s/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kanagarasu-s ↗</a></div>
+          <div class="card"><h3>GitHub</h3><a href="https://github.com/kanagarasu-s" target="_blank" rel="noopener noreferrer">github.com/kanagarasu-s ↗</a></div>
+          <div class="card"><h3>Location</h3><p>Greater Chennai Area, India</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© <span id="year">2026</span> Kanagarasu S. All rights reserved.</div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
